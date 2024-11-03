@@ -1,0 +1,366 @@
+:root {
+    --main-color: #857f7f;
+    --color-color: black;
+    --date-color:white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(122, 107, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.container{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    /* border: 5px solid green; */
+    outline: 5px solid rgb(255, 255, 255);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px black;
+    transition: 0.3s ;
+}
+.container:hover .data {
+    background-color: rgb(0, 255, 0);
+}
+.container .data {
+    border: 1px solid #b09292;
+    border-radius: 4px;
+    top: 90px;
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: cadetblue;
+    left: 38px;
+    box-shadow: 1px 1px 8px black inset;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 13px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .data::before{
+    position: absolute;
+    content: ":";
+    left: 17px;
+    top: -1px;
+    animation: deta 1s steps(1)  infinite;
+    font-weight: 900;
+}
+@keyframes deta {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+.container .icon {
+    color: white;
+    position: absolute;
+    left: 95px;
+    top: 149px;
+    z-index: 0;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    z-index: 55;
+    top: 95px;
+    left: 95px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px black;
+    border: 1px solid wheat;
+}
+.container .titles {
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    animation: ahmed 60s infinite linear;
+    position: absolute;
+    border-radius: 50%;
+    left: 96px;
+    top: 95px;
+    z-index: 2;
+
+}
+.container .titles::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 75px;
+    background-color:var(--main-color);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 5px;
+    box-shadow: 0 0 3px black;
+    border-radius:1cap  ;
+
+}
+.container .boxs {
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    animation: ahmed 3600s infinite linear;
+    position: absolute;
+    border-radius: 50%;
+    left: 96px;
+    top: 95px;
+    z-index: 2;
+
+}
+.container .boxs::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 70px;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 5px;
+    box-shadow: 0 0 3px black;
+    border-radius:1cap  ;
+
+}
+.container .infos::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 55px;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 5px;
+    box-shadow: 0 0 3px black;
+    z-index: -1;
+    border-radius:1cap  ;
+}
+.container .infos {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    animation: ahmed 43200s infinite linear;
+    border-radius: 50%;
+    top: 95px;
+    left: 96px;
+    z-index: 2;
+}
+/* @keyframes ahmed {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+span{
+    color:white
+}
+/* //////////////////////////////// */
+.Bottom {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 7px;
+    left: 100px;
+    bottom: 0px;
+}
+.Bm6{
+    position: absolute;
+    top: -18px;
+    left: -3px;
+    font-weight: bold;
+}
+.Right {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 3px;
+    right: 0;
+    bottom: 98px;
+}
+.Rt3 {
+    position: absolute;
+    top: -7px;
+    right: 9px;
+    font-weight: bold;
+}
+/* ///////////////////////////////////////////// */
+.Info {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 7px;
+    left: 183px;
+    top: 50px;
+    transform: rotate(62deg);
+}
+.Io2{
+    transform: rotate(290deg);
+    position: absolute;
+    left: -3px;
+    top: 5px;
+    font-weight: bold;
+}
+.Box {
+    transform: rotate(56deg);
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 7px;
+    left: 16px;
+    bottom: 46px;
+}
+.Bx8{
+    position: absolute;
+    top: -16px;
+    transform: rotate(-60deg);
+    font-weight: bold;
+    left: -1px;
+}
+.Text {
+    transform: rotate(117deg);
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 3px;
+    right: 143px;
+    bottom: 14px;
+}
+.Tet7{
+    position: absolute;
+    transform: rotate(219deg);
+    left: -12px;
+    top: -11px;
+    font-weight: bold;
+}
+.Title {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 3px;
+    left: 147px;
+    bottom: 181px;
+    transform: rotate(123deg);
+}
+.Tit1 {
+    position: absolute;
+    padding: 5px;
+    transform: rotate(233deg);
+    top: -9px;
+    left: 6px;
+    font-weight: bold;
+}
+/* ///////////////////////////////////////////// */
+.Nav {
+    transform: rotate(-61deg);
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 7px;
+    left: 183px;
+    bottom: 50px;
+}
+.Left {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 3px;
+    left: 0;
+    bottom: 98px;
+}
+.Lt9 {
+    font-weight: bold;
+    position: absolute;
+    top: -7px;
+    left: 9px;
+}
+.Nv4{
+    position: absolute;
+    top: -18px;
+    left: -4px;
+    transform: rotate(56deg);
+    font-weight: bold;
+}
+.Date {
+    transform: rotate(55deg);
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 3px;
+    right: 46px;
+    bottom: 15px;
+}
+.De5 {
+    font-weight: bold;
+    position: absolute;
+    bottom: -8px;
+    right: 10px;
+    transform: rotate(-79deg);
+}
+.Page {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 7px;
+    left: 14px;
+    top: 49px;
+    transform: rotate(-61deg);
+}
+.Pg10{
+    transform: rotate(50deg);
+    position: absolute;
+    top: 10px;
+    left: -7px;
+    font-weight: bold;
+}
+.Lable {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 3px;
+    left: 48px;
+    bottom: 183px;
+    transform: rotate(58deg);
+}
+.Le11{
+    position: absolute;
+    transform: rotate(-63deg);
+    top: -8px;
+    left: 10px;
+    font-weight: bold;
+}
+.Top {
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 7px;
+    left: 100px;
+    top: 0;
+}
+.Tp12 {
+    left: -7px;
+    top: 7px;
+    position: absolute;
+    font-weight: bold;
+}
